@@ -20,7 +20,7 @@ const Navbar = () => {
 		<nav className='p-4 backGradient text-white flex justify-center items-center fixed w-full top-0 z-50 shadow-lg'>
 			<div className='flex justify-between items-center max-w-7xl w-full bg-transparent'>
 				{/* Logo */}
-				<Link href='/' className='font-extrabold text-3xl text-sky-400'>
+				<Link href='/' className='font-extrabold md:text-3xl text-sky-400'>
 					ProMaker <span className='text-green-500'>Institute</span>
 				</Link>
 
