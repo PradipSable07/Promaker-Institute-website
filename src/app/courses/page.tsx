@@ -1,3 +1,4 @@
+"use client"
 import CourseInfo from "@/components/courses/CourseInfo";
 import Image from "next/image";
 import Link from "next/link";
