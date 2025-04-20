@@ -105,7 +105,6 @@ export default function Home() {
 				</motion.div>
 			</section>
 			{/* About */}
-			{/* About */}
 			<section className='text-center py-20 px-6 lg:min-h-[60vh] flex flex-col justify-center items-center bg-gray-800'>
 				<div className='max-w-7xl w-full mx-auto flex flex-col items-center'>
 					{/* Title */}

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { title } from "process";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
 	{ title: "Home", link: "/" },
@@ -15,7 +16,7 @@ const navLinks = [
 ];
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
-
+	const pathname = usePathname(); // Get current route
 	return (
 		<nav className='p-4 backGradient text-white flex justify-center items-center fixed w-full top-0 z-50 shadow-lg'>
 			<div className='flex justify-between items-center max-w-7xl w-full bg-transparent'>
@@ -30,8 +31,12 @@ const Navbar = () => {
 						{navLinks.map((item) => (
 							<li key={item.title}>
 								<Link
-									href={`${item.link}`}
-									className='relative after:content-[""] after:absolute after:bg-white after:h-[2px] after:w-0 after:left-0 after:bottom-[-2px] after:transition-all after:duration-300 hover:after:w-full'>
+									href={item.link}
+									className={`relative after:content-[""] after:absolute after:bg-white after:h-[2px] after:w-0 after:left-0 after:bottom-[-2px] after:transition-all after:duration-300 hover:after:w-full ${
+										pathname === item.link
+											? "text-green-400 font-bold after:w-full"
+											: ""
+									}`}>
 									{item.title}
 								</Link>
 							</li>
@@ -43,7 +48,7 @@ const Navbar = () => {
 				<button
 					className='md:hidden text-white z-50 transition-all duration-300  '
 					onClick={() => setIsOpen(!isOpen)}>
-					{isOpen ? <X size={28}  /> : <Menu size={28} />}
+					{isOpen ? <X size={28} /> : <Menu size={28} />}
 				</button>
 			</div>
 
@@ -59,7 +64,12 @@ const Navbar = () => {
 				<ul className='space-y-6 text-lg font-medium'>
 					{navLinks?.map((item) => (
 						<li key={item.title}>
-							<Link href={`${item.link}`} onClick={() => setIsOpen(false)}>
+							<Link
+								href={item.link}
+								className={`${
+									pathname === item.link ? "text-green-400 font-bold" : ""
+								}`}
+								onClick={() => setIsOpen(false)}>
 								{item.title}
 							</Link>
 						</li>
