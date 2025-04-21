@@ -1,4 +1,4 @@
-import { FaInstagram } from "react-icons/fa6";
+import { FaInstagram, FaTelegram } from "react-icons/fa6";
 import Link from "next/link";
 import { FaFacebook } from "react-icons/fa";
 import { ImYoutube2 } from "react-icons/im";
@@ -8,7 +8,7 @@ const address =
 const Footer = () => {
 	console.log("This Project is made by the Pss.tech");
 	return (
-		<footer className=' p-4 bg-black text-white w-full col-auto   '>
+		<footer className=' p-4 bg-[radial-gradient(circle,_#322727_0%,_#000000_100%)]	 text-white w-full col-auto   '>
 			<div className='max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-6 py-6 h-full'>
 				{/* Left Section */}
 				<div className='flex flex-col gap-4 w-full md:w-1/2 justify-start items-start min-h-full h-full'>
@@ -27,24 +27,30 @@ const Footer = () => {
 						<div>
 							Contact Number:
 							<Link href='tel:7219396227' className='text-sm ml-2 '>
-								 7219396227
+								7219396227
 							</Link>
 						</div>
 					</div>
 					{/* Social Links */}
 					<div className='flex gap-4 h-full'>
-						<div className='p-2 bg-blue-600 rounded'>
-							<Link href='/' title='Facebook' className='text-2xl text-white'>
+						<div className='p-2 bg-[#049be5] rounded'>
+							<Link href='https://t.me/promakerinstitute' target="_blank" title='Facebook' className='text-2xl text-white'>
+								<FaTelegram />
+							</Link>
+						</div>
+						<div className='p-2 bg-[#3a559f] rounded'>
+							<Link href='https://www.facebook.com/p/Pro-Maker-Institute-Stock-Market-100063953803312/' title='Facebook' target="_blank" className='text-2xl text-white'>
 								<FaFacebook />
 							</Link>
 						</div>
-						<div className='p-2 bg-red-600 rounded'>
-							<Link href='/' title='YouTube' className='text-2xl text-white'>
+						<div
+							className='p-1 bg-[#FF0000] rounded'>
+							<Link href='https://www.youtube.com/@promakerinstitute' title='YouTube' target="_blank" className='text-3xl text-white'>
 								<ImYoutube2 />
 							</Link>
 						</div>
-						<div className='p-2 bg-pink-500 rounded'>
-							<Link href='/' title='Instagram' className='text-2xl text-white'>
+						<div className='p-2 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded'>
+							<Link href='https://www.instagram.com/pro_makerinstitute/' title='Instagram' target="_blank" className='text-2xl text-white'>
 								<FaInstagram />
 							</Link>
 						</div>
@@ -70,3 +76,4 @@ const Footer = () => {
 	);
 };
 export default Footer;
+

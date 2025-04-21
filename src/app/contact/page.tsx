@@ -1,84 +1,81 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import {
+	FaTelegramPlane,
+	FaMapMarkerAlt,
+	FaPhoneAlt,
+	FaEnvelope,
+} from "react-icons/fa";
 
 const page = () => {
 	return (
-		<section className='flex max-w-7xl mx-auto  min-h-[80dvh]  flex-wrap items-center justify-between lg:flex-nowrap'>
-			<div className='w-full text-center flex flex-col justify-center gap-4 lg:text-start lg:w-1/2  '>
-				<h1 className='text-7xl font-extrabold text-sky-400'>
-					Master the Stock Market with Expert Guidance
-				</h1>
-				<p className='text-xl text-gray-200'>
-					Join our comprehensive courses and live sessions to elevate your
-					trading skills and knowledge{" "}
-				</p>
-				<div className='flex gap-4 mt-5 items-center'>
-					<Link
-						href='/contact'
-						className='button rounded-full  bg-blue-500 text-white hover:bg-green-600'
-						type='button'>
-						Get Started Today
-						<span className='button__icon-wrapper text-black '>
-							<svg
-								viewBox='0 0 14 15'
-								fill='none'
-								xmlns='http://www.w3.org/2000/svg'
-								className='button__icon-svg text-black'
-								width='10'>
-								<path
-									d='M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z'
-									fill='currentColor'></path>
-							</svg>
+		<section className='max-w-7xl mx-auto px-4 py-16 min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between gap-8'>
+			{/* Contact Info Section */}
+			<div className='w-full lg:w-1/2 text-white'>
+				<h1 className='text-4xl font-bold mb-6 text-sky-400'>Contact Us</h1>
 
-							<svg
-								viewBox='0 0 14 15'
-								fill='none'
-								width='10'
-								xmlns='http://www.w3.org/2000/svg'
-								className='button__icon-svg button__icon-svg--copy'>
-								<path
-									d='M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z'
-									fill='currentColor'></path>
-							</svg>
+				<ul className='space-y-4 text-lg'>
+					<li className='flex items-start gap-4'>
+						<FaMapMarkerAlt className='text-xl mt-1 text-blue-400' />
+						<span>
+							<b>ProMaker Institute</b>
+							<br />
+							<span className='text-sm text-gray-300'>
+								Cidco Growth Center, CIDCO Waluj Mahanagar 1, Waluj, Chhatrapati
+								Sambhaji Nagar, Dharmapur, Maharashtra 431136
+							</span>
 						</span>
-					</Link>
-					<Link
-						href='/contact'
-						className=' button rounded-full bg-green-500 text-white hover:bg-blue-600 '
-						type='button'>
-						Join Free Live Session
-						<span className='button__icon-wrapper'>
-							<svg
-								viewBox='0 0 14 15'
-								fill='none'
-								xmlns='http://www.w3.org/2000/svg'
-								className='button__icon-svg text-black'
-								width='10'>
-								<path
-									d='M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z'
-									fill='currentColor'></path>
-							</svg>
+					</li>
+					<li className='flex items-center gap-4'>
+						<FaPhoneAlt className='text-xl text-green-400' />
+						<a href='tel:+919876543210' className='hover:underline'>
+							+91 98765 43210
+						</a>
+					</li>
+					<li className='flex items-center gap-4'>
+						<FaEnvelope className='text-xl text-yellow-400' />
+						<a
+							href='mailto:contact@promakerinstitute.com'
+							className='hover:underline'>
+							contact@promakerinstitute.com
+						</a>
+					</li>
+					<li className='flex items-center gap-4'>
+						<FaTelegramPlane className='text-xl text-blue-400' />
+						<a
+							href='https://t.me/promakerinstitute'
+							target='_blank'
+							rel='noopener noreferrer'
+							className='hover:underline'>
+							Join our Telegram Channel
+						</a>
+					</li>
+				</ul>
 
-							<svg
-								viewBox='0 0 14 15'
-								fill='none'
-								width='10'
-								xmlns='http://www.w3.org/2000/svg'
-								className='button__icon-svg button__icon-svg--copy'>
-								<path
-									d='M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z'
-									fill='currentColor'></path>
-							</svg>
-						</span>
-					</Link>
+				{/* QR Code */}
+				<div className='mt-6'>
+					<p className='mb-2 text-gray-300'>
+						Scan to join our Telegram channel:
+					</p>
+					<Image
+						src='/assets/images/photo_2025-04-21 23.19.50.jpeg'
+						alt='Telegram QR Code'
+						width={240}
+						height={240}
+						className='rounded-lg shadow-md'
+					/>
 				</div>
 			</div>
-			<div className='hidden lg:flex lg:w-1/2  justify-center'>
+
+			{/* SVG Illustration */}
+			<div className='w-full lg:w-1/2 flex justify-center items-center'>
 				<Image
-					src='/assets/images/undraw_all_the_data_re_hh4w.svg'
-					alt=' Share Market data'
-					width='500'
-					height={500}
+					src='/assets/svgs/contact-us_kcoa.svg'
+					alt='Contact illustration'
+					width={100}
+					height={100}
+					className='animate-fade-in w-full '
 				/>
 			</div>
 		</section>
