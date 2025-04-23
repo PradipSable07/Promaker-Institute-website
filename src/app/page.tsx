@@ -140,7 +140,7 @@ export default function Home() {
 			{/* Courses Section */}
 			<CourseInfo />
 			{/* Testimonial Section */}
-			<section className='bg-gray-900 py-20 px-6 text-center  mx-auto lg:min-h-[80dvh] flex flex-col justify-center items-center'>
+			{/* <section className='bg-gray-900 py-20 px-6 text-center  mx-auto lg:min-h-[80dvh] flex flex-col justify-center items-center'>
 				<h2 className='text-4xl font-bold text-sky-400'>
 					What Our Students Say
 				</h2>
@@ -159,9 +159,9 @@ export default function Home() {
 						</motion.div>
 					))}
 				</div>
-			</section>
+			</section> */}
 			{/* Blog Section */}
-			<section className='py-20 px-6 max-w-7xl lg:min-h-[80dvh] h-full mx-auto flex flex-col justify-center items-center'>
+			{/* <section className='py-20 px-6 max-w-7xl lg:min-h-[80dvh] h-full mx-auto flex flex-col justify-center items-center'>
 				<h2 className='text-4xl font-bold text-sky-400 text-center'>
 					Latest Insights & Market Trends
 				</h2>
@@ -185,7 +185,7 @@ export default function Home() {
 						)
 					)}
 				</div>
-			</section>
+			</section> */}
 		</main>
 	);
 }
