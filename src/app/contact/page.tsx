@@ -12,16 +12,16 @@ const page = () => {
 	return (
 		<section className='max-w-7xl mx-auto px-4 py-16 min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between gap-8'>
 			{/* Contact Info Section */}
-			<div className='w-full lg:w-1/2 text-white'>
+			<div className='w-full lg:w-1/2 text-white flex flex-col justify-center items-center lg:items-start'>
 				<h1 className='text-4xl font-bold mb-6 text-sky-400'>Contact Us</h1>
 
-				<ul className='space-y-4 text-lg'>
+				<ul className='space-y-4 text-lg mx-auto'>
 					<li className='flex items-start gap-4'>
 						<FaMapMarkerAlt className='text-xl mt-1 text-blue-400' />
 						<span>
 							<b>ProMaker Institute</b>
 							<br />
-							<span className='text-sm text-gray-300'>
+							<span className='text-sm text-gray-300 capitalize'>
 								Cidco Growth Center, CIDCO Waluj Mahanagar 1, Waluj, Chhatrapati
 								Sambhaji Nagar, Dharmapur, Maharashtra 431136
 							</span>
@@ -54,7 +54,7 @@ const page = () => {
 				</ul>
 
 				{/* QR Code */}
-				<div className='mt-6'>
+				<div className='mt-6 mx-auto w-full'>
 					<p className='mb-2 text-gray-300'>
 						Scan to join our Telegram channel:
 					</p>
@@ -63,13 +63,13 @@ const page = () => {
 						alt='Telegram QR Code'
 						width={240}
 						height={240}
-						className='rounded-lg shadow-md'
+						className='rounded-lg shadow-md animate-fade-in mx-auto'
 					/>
 				</div>
 			</div>
 
 			{/* SVG Illustration */}
-			<div className='w-full lg:w-1/2 flex justify-center items-center'>
+			<div className='w-full lg:w-1/2 mx-auto hidden md:block'>
 				<Image
 					src='/assets/svgs/contact-us_kcoa.svg'
 					alt='Contact illustration'
