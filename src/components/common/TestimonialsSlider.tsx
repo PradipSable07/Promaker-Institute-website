@@ -59,7 +59,7 @@ const TestimonialsSlider = () => {
 				},
 			}}>
 			{testimonials.map((testimonial, index) => {
-				const slideShift = index % 2 === 0 ? "rotate-2" : "-rotate-2";
+				const slideShift = index % 2 === 0 ? "rotate-6" : "-rotate-6";
 				const cleanExperience = testimonial.experience
 					?.trim()
 					.replace(/^["']+|["']+$/g, "");
@@ -73,7 +73,7 @@ const TestimonialsSlider = () => {
 				return (
 					<SwiperSlide
 						key={index}
-						className={`swiper-slide ${slideShift} transform`}>
+						className={`swiper-slide ${slideShift} transform `}>
 						<div className='h-full flex flex-col justify-center items-center p-4 text-yellow-100 rounded-lg max-w-md'>
 							<div className='mt-2 text-center h-full w-full '>
 								<BiSolidQuoteAltLeft className='inline-block text-4xl mr-2 mb-1 align-text-bottom capitalize' />
