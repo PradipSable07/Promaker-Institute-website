@@ -53,7 +53,7 @@ export default function Home() {
 
 			<main className='bg-[#11102d] text-white'>
 				{/* Hero */}
-				<section className='flex max-w-7xl mx-auto lg:min-h-[100dvh] my-40 lg:my-0 flex-wrap items-center justify-between lg:flex-nowrap'>
+				<section className='flex max-w-7xl mx-auto lg:min-h-[100dvh] my-40 lg:my-0 flex-wrap items-center justify-between lg:flex-nowrap gap-4'>
 					<motion.div
 						whileInView={{ opacity: 1, y: 0 }}
 						initial={{ opacity: 0, y: 50 }}

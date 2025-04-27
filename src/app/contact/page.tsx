@@ -12,7 +12,7 @@ import {
 const page = () => {
 	return (
 		<>
-			<section className='max-w-7xl mx-auto px-4 py-16 min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between gap-8'>
+			<section className='max-w-7xl mx-auto px-4 pt-20 min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between gap-8'>
 				{/* Contact Info Section */}
 				<div className='w-full lg:w-1/2 text-white flex flex-col justify-center items-center lg:items-start'>
 					<h1 className='text-4xl font-bold mb-6 text-sky-400'>Contact Us</h1>
@@ -56,32 +56,23 @@ const page = () => {
 					</ul>
 
 					{/* QR Code */}
-					<div className='mt-6 mx-auto w-full'>
-						<p className='mb-2 text-gray-300'>
-							Scan to join our Telegram channel:
-						</p>
-						<Image
-							src='/assets/images/photo_2025-04-21 23.19.50.jpeg'
-							alt='Telegram QR Code'
-							width={240}
-							height={240}
-							className='rounded-lg shadow-md animate-fade-in mx-auto'
-						/>
-					</div>
 				</div>
 
 				{/* SVG Illustration */}
 				<div className='w-full lg:w-1/2 mx-auto hidden md:block'>
+					<p className='mb-4 text-center text-gray-300'>
+						Scan to join our Telegram channel:
+					</p>
 					<Image
-						src='/assets/svgs/contact-us_kcoa.svg'
-						alt='Contact illustration'
-						width={100}
-						height={100}
-						className='animate-fade-in w-full '
+						src='/assets/images/photo_2025-04-21 23.19.50.jpeg'
+						alt='Telegram QR Code'
+						width={240}
+						height={240}
+						className='rounded-lg shadow-md animate-fade-in mx-auto'
 					/>
 				</div>
 			</section>
-			<FeedBack/>
+			<FeedBack />
 		</>
 	);
 };
