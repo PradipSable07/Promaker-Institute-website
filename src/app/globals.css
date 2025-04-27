@@ -299,7 +299,7 @@ body {
 
 /* Hover effect */
 .swiper-slide:hover {
-  transform: scale(1.1) rotate(0deg) !important;
+  transform: rotate(0deg) !important;
   background-color: #0f172a;
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
   cursor: grab;

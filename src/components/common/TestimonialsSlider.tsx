@@ -14,7 +14,7 @@ interface Testimonial {
 
 const TestimonialsSlider = () => {
 	const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
-  const [isExpanded, setIsExpanded] = useState(false);
+	const [isExpanded, setIsExpanded] = useState(false);
 
 	useEffect(() => {
 		const fetchTestimonials = async () => {
@@ -39,25 +39,13 @@ const TestimonialsSlider = () => {
 
 	return (
 		<Swiper
-			modules={[Navigation, Autoplay]}
+			modules={[ Autoplay]}
 			spaceBetween={20}
-			navigation
-			autoplay={{ delay: 2000 }}
+		
+			autoplay={{ delay: 1000 }}
+			slidesPerView={1}
 			loop
-			breakpoints={{
-				0: {
-					slidesPerView: 1,
-				},
-				640: {
-					slidesPerView: 2,
-				},
-				1024: {
-					slidesPerView: 3,
-				},
-				1280: {
-					slidesPerView: 3,
-				},
-			}}>
+			>
 			{testimonials.map((testimonial, index) => {
 				const slideShift = index % 2 === 0 ? "rotate-6" : "-rotate-6";
 				const cleanExperience = testimonial.experience
@@ -74,35 +62,18 @@ const TestimonialsSlider = () => {
 					<SwiperSlide
 						key={index}
 						className={`swiper-slide ${slideShift} transform `}>
-						<div className='h-full flex flex-col justify-center items-center p-4 text-yellow-100 rounded-lg max-w-md'>
-							<div className='mt-2 text-center h-full w-full '>
-								<BiSolidQuoteAltLeft className='inline-block text-4xl mr-2 mb-1 align-text-bottom capitalize' />
-								<span className='text-2xl font-bold mr-1 uppercase'>
-									{firstChar}
-								</span>
-								<span>{displayedText}</span>
-								{isLong && (
-									<button
-										className='ml-2 text-blue-400 underline text-sm'
-										onClick={() => setIsExpanded(!isExpanded)}>
-										{isExpanded ? "Read less" : "Read more"}
-									</button>
-								)}
-								<span>
-									<RiDoubleQuotesR className='inline-block mb-2 ml-2 align-text-bottom' />
-								</span>
+						<div
+							key={index}
+							className='custom-slide p-6 rounded-lg bg-gray-800 text-white min-h-[200px] flex flex-col justify-center items-center'>
+							<p className='text-lg italic text-gray-300 text-center mb-4'>
+								&quot;{testimonial.experience}&quot;
+							</p>
+							<div className='flex items-center justify-center mb-2'>
+								<StarRating rating={testimonial.rating} />
 							</div>
-
-							<div className='flex w-full h-full py-2 justify-end items-end flex-col'>
-								<h3 className='text-xl font-bold capitalize'>
-									{testimonial.name}
-								</h3>
-								<div
-									className='flex justify-end items-center'
-									title={`Rating: ${testimonial.rating}/5`}>
-									{renderStars(Number(testimonial.rating))}
-								</div>
-							</div>
+							<p className='font-semibold text-sky-400 text-center'>
+								- {testimonial.name}
+							</p>
 						</div>
 					</SwiperSlide>
 				);
@@ -131,4 +102,19 @@ export const renderStars = (rating: number) => {
 	}
 
 	return stars;
+};
+
+const StarRating = ({ rating }: { rating: number }) => {
+	const stars = [];
+	for (let i = 1; i <= 5; i++) {
+		stars.push(
+			<Star
+				key={i}
+				className={`h-5 w-5 ${
+					i <= rating ? "text-yellow-400 fill-yellow-400" : "text-gray-400"
+				}`}
+			/>
+		);
+	}
+	return <div className='flex items-center'>{stars}</div>;
 };

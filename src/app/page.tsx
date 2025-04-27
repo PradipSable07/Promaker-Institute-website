@@ -5,8 +5,19 @@ import { motion } from "framer-motion";
 import CourseInfo from "@/components/courses/CourseInfo";
 import TestimonialsSlider from "@/components/common/TestimonialsSlider";
 import Head from "next/head";
+import { Star } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
+
+interface Testimonial {
+    name: string;
+    experience: string;
+    rating: number;
+}
 export default function Home() {
+	
+  
+  
 	return (
 		<>
 			<Head>
@@ -29,8 +40,14 @@ export default function Home() {
 					property='og:description'
 					content='Join ProMaker Institute to master stock market skills and become a confident trader. Over 1000+ students trained!'
 				/>
-				<meta property='og:image' content='/assets/images/photo_2024-10-17 21.25.25.webp' />
-				<meta property='og:url' content='https://promaker-institute-website.vercel.app/' />
+				<meta
+					property='og:image'
+					content='/assets/images/photo_2024-10-17 21.25.25.webp'
+				/>
+				<meta
+					property='og:url'
+					content='https://promaker-institute-website.vercel.app/'
+				/>
 				<meta name='twitter:card' content='summary_large_image' />
 			</Head>
 
@@ -58,8 +75,7 @@ export default function Home() {
 									href='/courses'
 									className='button rounded-full  bg-blue-500 text-white hover:bg-green-500'
 									type='button'>
-									Learn, Trade, and Grow with Confidence
-									{" "}
+									Learn, Trade, and Grow with Confidence{" "}
 									<span className='button__icon-wrapper text-black '>
 										<svg
 											viewBox='0 0 14 15'
@@ -91,7 +107,7 @@ export default function Home() {
 								transition={{ duration: 0.6, delay: 0.6 }}>
 								<Link
 									href='https://t.me/promakerinstitute'
-									target="_blank"
+									target='_blank'
 									className=' button rounded-full bg-green-500 text-white hover:bg-blue-500 '
 									type='button'>
 									Join Our Community
@@ -122,18 +138,12 @@ export default function Home() {
 							</motion.div>
 						</div>
 					</motion.div>
-					<motion.div
-						whileInView={{ opacity: 1, y: 0 }}
-						initial={{ opacity: 0, y: 50 }}
-						transition={{ duration: 0.6 }}
-						className='hidden lg:flex lg:w-1/2 justify-center'>
-						<Image
-							src='/assets/images/undraw_all_the_data_re_hh4w.svg'
-							alt='Share Market data'
-							width='500'
-							height={500}
-						/>
-					</motion.div>
+					{/* Testimonial Slider Container */}
+					<div className='lg:w-1/2 w-full  '>
+					
+							<TestimonialsSlider />
+						
+					</div>
 				</section>
 				{/* About */}
 				<section className='text-center py-20 px-6 lg:min-h-[60vh] flex flex-col justify-center items-center bg-gray-800'>
@@ -172,13 +182,31 @@ export default function Home() {
 				</section>
 				{/* Courses Section */}
 				<CourseInfo />
+
+				<section className='text-center py-20 px-6 lg:min-h-[60vh] flex flex-col justify-center items-center bg-gray-800'>
+					<h3 className='text-4xl font-bold text-sky-400'>Contact Us Now</h3>
+					<p className='text-lg text-gray-300 mt-4'>
+						Ready to take your trading to the next level? Contact us today and unlock
+						your trading potential.
+					</p>
+
+					
+						<Link 
+							href='/contact'
+							type="button"
+							className='inline-block mt-10 shadow-gray-900 hover:bg-gradient-to-r border border-dashed duration-700 animate-bounce hover:animate-none md:w-1/6  text-white px-8 py-3 rounded-full hover:from-sky-600 hover:border-none hover:to-green-600 transition-all  shadow-lg text-lg font-semibold'>
+						
+							Contact Us
+						</Link>
+				
+				</section>
 				{/* Testimonial Section */}
-				<section className='bg-gray-900  px-6 text-center  mx-auto lg:min-h-[80dvh] flex flex-col justify-center items-center'>
+				{/* <section className='bg-gray-900  px-6 text-center  mx-auto lg:min-h-[80dvh] flex flex-col justify-center items-center'>
 					<h2 className='text-4xl font-bold text-sky-400 mb-8'>
 						What Our Students Say
 					</h2>
 					<TestimonialsSlider />
-				</section>
+				</section> */}
 				{/* Blog Section */}
 				{/* <section className='py-20 px-6 max-w-7xl lg:min-h-[80dvh] h-full mx-auto flex flex-col justify-center items-center'>
 				<h2 className='text-4xl font-bold text-sky-400 text-center'>
