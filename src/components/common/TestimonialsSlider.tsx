@@ -116,7 +116,7 @@ export default TestimonialsSlider;
 import { Star, StarHalf, StarIcon, StarOff } from "lucide-react"; // or any icon lib
 import { RiDoubleQuotesR } from "react-icons/ri";
 
-const renderStars = (rating: number) => {
+export const renderStars = (rating: number) => {
 	const fullStars = Math.floor(rating);
 	const stars = [];
 

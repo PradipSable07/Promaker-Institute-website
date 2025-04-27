@@ -104,6 +104,17 @@ body {
 
   
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* for IE and Edge */
+  scrollbar-width: none;  /* for Firefox */
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 0.8rem;
@@ -112,9 +123,8 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
- 
-  background: rgb(191, 206, 172);
 
+  background: rgb(191, 206, 172);
 }
 
 /* Handle */

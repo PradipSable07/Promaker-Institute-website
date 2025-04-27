@@ -29,8 +29,8 @@ const page = () => {
 					</li>
 					<li className='flex items-center gap-4'>
 						<FaPhoneAlt className='text-xl text-green-400' />
-						<a href='tel:+919876543210' className='hover:underline'>
-							+91 98765 43210
+						<a href='tel:+91 7219396227' className='hover:underline'>
+						+91 7219396227
 						</a>
 					</li>
 					<li className='flex items-center gap-4'>

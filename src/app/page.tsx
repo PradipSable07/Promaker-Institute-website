@@ -58,7 +58,8 @@ export default function Home() {
 									href='/contact'
 									className='button rounded-full  bg-blue-500 text-white hover:bg-green-500'
 									type='button'>
-									Get Started for Free{" "}
+									Learn, Trade, and Grow with Confidence
+									{" "}
 									<span className='button__icon-wrapper text-black '>
 										<svg
 											viewBox='0 0 14 15'
