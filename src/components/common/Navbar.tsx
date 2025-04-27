@@ -21,8 +21,25 @@ const Navbar = () => {
 		<nav className='p-4 backGradient text-white flex justify-center items-center fixed w-full top-0 z-50 shadow-lg'>
 			<div className='flex justify-between items-center max-w-7xl w-full bg-transparent'>
 				{/* Logo */}
-				<Link href='/' className='font-extrabold md:text-3xl text-sky-400'>
-					ProMaker <span className='text-green-500'>Institute</span>
+				<Link
+					href='/'
+					className='group relative font-extrabold md:text-3xl text-sky-400 flex gap-2 mb-2 items-center overflow-hidden'>
+					<div className='relative flex items-center'>
+						<Image
+							src='/assets/images/Asset 1Pro Maker Institute Icon.png'
+							alt='Logo'
+							width={100}
+							height={100}
+							className='object-contain w-6 lg:w-12 group-hover:animate-pulse duration-300 '
+						/>
+						<Image
+							src='/assets/images/Asset 2Pro Maker Institute Text.png'
+							alt='Logo'
+							width={100}
+							height={100}
+							className='object-contain lg:w-80 w-48 ml-2'
+						/>
+					</div>
 				</Link>
 
 				{/* Desktop Menu */}
@@ -63,11 +80,13 @@ const Navbar = () => {
 				}`}>
 				<ul className='space-y-6 text-lg font-medium h-full'>
 					{navLinks?.map((item) => (
-						<li key={item.title} className="hover:text-green-400 w-full">
+						<li key={item.title} className='hover:text-green-400 w-full'>
 							<Link
 								href={item.link}
 								className={`${
-									pathname === item.link ? "text-green-400 font-bold  w-full" : ""
+									pathname === item.link
+										? "text-green-400 font-bold  w-full"
+										: ""
 								}`}
 								onClick={() => setIsOpen(false)}>
 								{item.title}

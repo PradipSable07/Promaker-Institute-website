@@ -183,7 +183,7 @@ export default function Home() {
 				{/* Courses Section */}
 				<CourseInfo />
 
-				<section className='text-center py-20 px-6 lg:min-h-[60vh] flex flex-col justify-center items-center bg-gray-800'>
+				<section className='text-center py-20 px-6 lg:min-h-[50vh] flex flex-col justify-center items-center bg-gray-800'>
 					<h3 className='text-4xl font-bold text-sky-400'>Contact Us Now</h3>
 					<p className='text-lg text-gray-300 mt-4'>
 						Ready to take your trading to the next level? Contact us today and unlock

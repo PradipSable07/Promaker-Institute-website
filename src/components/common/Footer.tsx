@@ -2,18 +2,37 @@ import { FaInstagram, FaTelegram } from "react-icons/fa6";
 import Link from "next/link";
 import { FaFacebook } from "react-icons/fa";
 import { ImYoutube2 } from "react-icons/im";
+import Image from "next/image";
 
 const address =
 	"Cidco Growth Center, CIDCO Waluj Mahanagar 1, Waluj, Chhatrapati Sambhaji Nagar, Dharmapur, Maharashtra 431136";
 const Footer = () => {
 	console.log("This Project is made by the Pss.tech");
 	return (
-		<footer className=' p-4 bg-[radial-gradient(circle,_#322727_0%,_#000000_100%)]	 text-white w-full col-auto   '>
+		<footer className=' p-4 bg-[radial-gradient(circle,_#7c7878_0%,_#292727_100%)]	 text-white w-full col-auto   '>
 			<div className='max-w-7xl mx-auto w-full flex flex-col md:flex-row justify-between items-start md:items-center gap-6 py-6 h-full'>
 				{/* Left Section */}
 				<div className='flex flex-col gap-4 w-full md:w-1/2 justify-start items-start min-h-full h-full'>
 					<div className='h-full w-full'>
-						<h2 className='text-2xl font-bold'>ProMaker Institute</h2>
+						<Link
+							href='/'
+							className='group font-extrabold md:text-3xl text-sky-400 flex gap-2 mb-2 items-center'>
+							<Image
+								src='/assets/images/Asset 1Pro Maker Institute Icon.png'
+								alt='Logo'
+								width={100}
+								height={100}
+								className='object-contain w-6 lg:w-12 transition-transform duration-700 ease-in-out group-hover:translate-x-48 group-hover:-translate-y-16' 
+							/>
+							<Image
+								src='/assets/images/Asset 2Pro Maker Institute Text.png'
+								alt='Logo'
+								width={100}
+								height={100}
+								className='object-contain lg:w-80 w-48'
+							/>
+						</Link>
+
 						<div>
 							Address:{" "}
 							<Link
@@ -34,23 +53,38 @@ const Footer = () => {
 					{/* Social Links */}
 					<div className='flex gap-4 h-full'>
 						<div className='p-2 bg-[#049be5] rounded'>
-							<Link href='https://t.me/promakerinstitute' target="_blank" title='Facebook' className='text-2xl text-white'>
+							<Link
+								href='https://t.me/promakerinstitute'
+								target='_blank'
+								title='Facebook'
+								className='text-2xl text-white'>
 								<FaTelegram />
 							</Link>
 						</div>
 						<div className='p-2 bg-[#3a559f] rounded'>
-							<Link href='https://www.facebook.com/p/Pro-Maker-Institute-Stock-Market-100063953803312/' title='Facebook' target="_blank" className='text-2xl text-white'>
+							<Link
+								href='https://www.facebook.com/p/Pro-Maker-Institute-Stock-Market-100063953803312/'
+								title='Facebook'
+								target='_blank'
+								className='text-2xl text-white'>
 								<FaFacebook />
 							</Link>
 						</div>
-						<div
-							className='p-1 bg-[#FF0000] rounded'>
-							<Link href='https://www.youtube.com/@promakerinstitute' title='YouTube' target="_blank" className='text-3xl text-white'>
+						<div className='p-1 bg-[#FF0000] rounded'>
+							<Link
+								href='https://www.youtube.com/@promakerinstitute'
+								title='YouTube'
+								target='_blank'
+								className='text-3xl text-white'>
 								<ImYoutube2 />
 							</Link>
 						</div>
 						<div className='p-2 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] rounded'>
-							<Link href='https://www.instagram.com/pro_makerinstitute/' title='Instagram' target="_blank" className='text-2xl text-white'>
+							<Link
+								href='https://www.instagram.com/pro_makerinstitute/'
+								title='Instagram'
+								target='_blank'
+								className='text-2xl text-white'>
 								<FaInstagram />
 							</Link>
 						</div>
@@ -76,4 +110,3 @@ const Footer = () => {
 	);
 };
 export default Footer;
-

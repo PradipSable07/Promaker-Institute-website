@@ -172,7 +172,8 @@ body {
     left: 0;
     right: 0;
     padding: 20px;
-    background-image: radial-gradient(rgba(0, 0, 0, 0) 1px, rgba(255, 255, 255, 0.25) 1px);
+    background-color: #ffffff25;
+    /* background-image: radial-gradient(rgba(0, 0, 0, 0) 1px, rgba(255, 255, 255, 0.25) 1px); */
     background-size: 4px 4px;
     backdrop-filter: blur(6px);
     font-size: 14px;
@@ -299,7 +300,7 @@ body {
 
 /* Hover effect */
 .swiper-slide:hover {
-  transform: rotate(0deg) !important;
+  transform: scale(1.1) rotate(0deg) !important;
   background-color: #0f172a;
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
   cursor: grab;

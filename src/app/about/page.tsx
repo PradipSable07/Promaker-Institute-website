@@ -454,7 +454,7 @@ const AboutUsPage = () => {
 			</section>
 
 			{/* Final Call to Action */}
-			<section className='py-16 bg-gray-900'>
+			<section className='py-12 bg-gray-900 h-[calc(50vh)] flex justify-center items-center'>
 				<div className='container mx-auto text-center'>
 					<motion.h2
 						initial={{ opacity: 0, y: -20 }}
