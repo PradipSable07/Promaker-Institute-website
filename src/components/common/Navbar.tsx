@@ -12,7 +12,7 @@ const navLinks = [
 	{ title: "About", link: "/about" },
 	{ title: "Courses", link: "/courses" },
 	{ title: "Contact", link: "/contact" },
-	{ title: "Blogs", link: "/blogs" },
+	// { title: "Blogs", link: "/blogs" },
 ];
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
