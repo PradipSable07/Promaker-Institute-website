@@ -18,7 +18,7 @@ const CourseInfo = () => {
 						whileInView={{ opacity: 1, scale: 1 }}
 						initial={{ opacity: 0, scale: 0.9 }}
 						transition={{ delay: id * 0.2 }}
-						className='p-6 w-full min-w-[22rem] bg-gray-800 rounded-lg shadow-md'>
+						className='p-6 w-full min-w-[20rem] md:min-w-[22rem] bg-gray-800 rounded-lg shadow-md'>
 						<h3 className='text-2xl font-semibold text-green-400'>
 							{course.title}
 						</h3>

@@ -40,11 +40,12 @@ const TestimonialsSlider = () => {
 	return (
 		<Swiper
 			modules={[ Autoplay]}
-			spaceBetween={20}
-		
+			spaceBetween={80}
 			autoplay={{ delay: 1000 }}
 			slidesPerView={1}
-			loop
+
+			loop 
+			// className=" gap-2 m-4"
 			>
 			{testimonials.map((testimonial, index) => {
 				const slideShift = index % 2 === 0 ? "rotate-6" : "-rotate-6";
@@ -61,11 +62,11 @@ const TestimonialsSlider = () => {
 				return (
 					<SwiperSlide
 						key={index}
-						className={`swiper-slide ${slideShift} transform `}>
+						className={`swiper-slide ${slideShift} transform transition duration-500 ease-in-out`}>
 						<div
 							key={index}
-							className='custom-slide p-6 rounded-lg bg-gray-800 text-white min-h-[200px] flex flex-col justify-center items-center'>
-							<p className='text-lg italic text-gray-300 text-center mb-4'>
+							className=' p-2 rounded-lg bg-gray-800 text-white min-h-[200px] flex flex-col justify-center items-center'>
+							<p className='text-lg italic text-gray-300 text-center '>
 								&quot;{testimonial.experience}&quot;
 							</p>
 							<div className='flex items-center justify-center mb-2'>

@@ -221,7 +221,7 @@ const AboutUsPage = () => {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ duration: 0.5 }}
-				className='flex max-w-7xl mx-auto min-h-[calc(100vh-64px)] flex-wrap items-center justify-between lg:flex-nowrap py-16 px-4'>
+				className='flex max-w-7xl mx-auto min-h-[calc(90vh)] lg:min-h-[calc(100vh-64px)] flex-wrap items-center justify-between lg:flex-nowrap py-24 lg:py-16 px-4'>
 				{/* Banner Content */}
 				<div className='w-full text-center flex flex-col justify-center gap-4 lg:text-start lg:w-1/2'>
 					<motion.h1
@@ -242,7 +242,7 @@ const AboutUsPage = () => {
 						experience, ProMaker Institute is dedicated to transforming trading
 						journeys.
 					</motion.p>
-					<div className='mt-6 flex gap-4'>
+					<div className='mt-6 flex gap-4 justify-center items-center md:justify-start'>
 						<Link
 							href='/contact'
 							className='button rounded-full bg-blue-500 text-white px-6 py-2 hover:bg-green-600 transition'>

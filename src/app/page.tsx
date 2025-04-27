@@ -8,16 +8,12 @@ import Head from "next/head";
 import { Star } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-
 interface Testimonial {
-    name: string;
-    experience: string;
-    rating: number;
+	name: string;
+	experience: string;
+	rating: number;
 }
 export default function Home() {
-	
-  
-  
 	return (
 		<>
 			<Head>
@@ -53,7 +49,7 @@ export default function Home() {
 
 			<main className='bg-[#11102d] text-white'>
 				{/* Hero */}
-				<section className='flex max-w-7xl mx-auto lg:min-h-[100dvh] my-40 lg:my-0 flex-wrap items-center justify-between lg:flex-nowrap gap-4'>
+				<section className='flex max-w-7xl mx-auto lg:min-h-[100dvh] mt-40 mb-4 lg:my-0 flex-wrap items-center justify-between lg:flex-nowrap gap-4'>
 					<motion.div
 						whileInView={{ opacity: 1, y: 0 }}
 						initial={{ opacity: 0, y: 50 }}
@@ -66,7 +62,7 @@ export default function Home() {
 							Learn trading strategies, investment principles, and financial
 							insights from industry experts.
 						</p>
-						<div className='mt-10 flex gap-4 lg:mt-5 items-center justify-center lg:justify-start'>
+						<div className='mt-10 flex gap-4 lg:mt-5 items-center justify-center lg:justify-start flex-col md:flex-row'>
 							<motion.div
 								whileInView={{ opacity: 1, y: 0 }}
 								initial={{ opacity: 0, y: 50 }}
@@ -139,10 +135,8 @@ export default function Home() {
 						</div>
 					</motion.div>
 					{/* Testimonial Slider Container */}
-					<div className='lg:w-1/2 w-full  '>
-					
-							<TestimonialsSlider />
-						
+					<div className='lg:w-1/2 w-full  flex justify-center items-center h-full '>
+						<TestimonialsSlider />
 					</div>
 				</section>
 				{/* About */}
@@ -186,19 +180,16 @@ export default function Home() {
 				<section className='text-center py-20 px-6 lg:min-h-[50vh] flex flex-col justify-center items-center bg-gray-800'>
 					<h3 className='text-4xl font-bold text-sky-400'>Contact Us Now</h3>
 					<p className='text-lg text-gray-300 mt-4'>
-						Ready to take your trading to the next level? Contact us today and unlock
-						your trading potential.
+						Ready to take your trading to the next level? Contact us today and
+						unlock your trading potential.
 					</p>
 
-					
-						<Link 
-							href='/contact'
-							type="button"
-							className='inline-block mt-10 shadow-gray-900 hover:bg-gradient-to-r border border-dashed duration-700 animate-bounce hover:animate-none md:w-1/6  text-white px-8 py-3 rounded-full hover:from-sky-600 hover:border-none hover:to-green-600 transition-all  shadow-lg text-lg font-semibold'>
-						
-							Contact Us
-						</Link>
-				
+					<Link
+						href='/contact'
+						type='button'
+						className='inline-block mt-10 shadow-gray-900 hover:bg-gradient-to-r border border-dashed duration-700 animate-bounce hover:animate-none md:w-1/6  text-white px-8 py-3 rounded-full hover:from-sky-600 hover:border-none hover:to-green-600 transition-all  shadow-lg text-lg font-semibold'>
+						Contact Us
+					</Link>
 				</section>
 				{/* Testimonial Section */}
 				{/* <section className='bg-gray-900  px-6 text-center  mx-auto lg:min-h-[80dvh] flex flex-col justify-center items-center'>

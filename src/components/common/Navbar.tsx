@@ -78,22 +78,22 @@ const Navbar = () => {
 				className={`fixed top-0 right-0 h-screen w-64 bg-gray-900 p-6 flex flex-col md:hidden ${
 					isOpen ? "shadow-xl" : ""
 				}`}>
-				<ul className='space-y-6 text-lg font-medium h-full'>
+				<div className='space-y-6 flex flex-col gap-2 text-lg font-medium h-full'>
 					{navLinks?.map((item) => (
-						<li key={item.title} className='hover:text-green-400 w-full'>
-							<Link
+				
+							<Link key={item.title}
 								href={item.link}
 								className={`${
 									pathname === item.link
-										? "text-green-400 font-bold  w-full"
-										: ""
+										? "text-green-400 font-bold  !w-full"
+										: " !w-full"
 								}`}
 								onClick={() => setIsOpen(false)}>
 								{item.title}
 							</Link>
-						</li>
+					
 					))}
-				</ul>
+				</div>
 			</motion.div>
 		</nav>
 	);

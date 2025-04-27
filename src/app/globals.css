@@ -272,13 +272,12 @@ body {
   display: flex;
   box-sizing: content-box;
   margin: 1rem 0;
+
 }
 
 .swiper-slide {
   position: relative;
   background-color: #1f1f1f;
-  width: calc(100% - 10%);
-  height: 100%;
   cursor: grab;
   display: flex;
   align-items: center;
@@ -286,7 +285,7 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 1rem;
   border: 1px solid #5d5b53;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 /* Alternate rotation */

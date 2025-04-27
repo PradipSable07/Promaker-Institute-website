@@ -12,7 +12,7 @@ import {
 const page = () => {
 	return (
 		<>
-			<section className='max-w-7xl mx-auto px-4 pt-20 min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between gap-8'>
+			<section className='max-w-7xl mx-auto px-4 py-24 !md:pt-20 min-h-screen flex flex-col lg:flex-row items-center justify-between gap-8'>
 				{/* Contact Info Section */}
 				<div className='w-full lg:w-1/2 text-white flex flex-col justify-center items-center lg:items-start'>
 					<h1 className='text-4xl font-bold mb-6 text-sky-400'>Contact Us</h1>
@@ -54,12 +54,10 @@ const page = () => {
 							</a>
 						</li>
 					</ul>
-
-					{/* QR Code */}
 				</div>
 
-				{/* SVG Illustration */}
-				<div className='w-full lg:w-1/2 mx-auto hidden md:block'>
+				{/* QR Code */}
+				<div className='w-full lg:w-1/2 mx-auto md:block'>
 					<p className='mb-4 text-center text-gray-300'>
 						Scan to join our Telegram channel:
 					</p>
