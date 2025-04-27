@@ -55,7 +55,7 @@ export default function Home() {
 								initial={{ opacity: 0, y: 50 }}
 								transition={{ duration: 0.6, delay: 0.3 }}>
 								<Link
-									href='/contact'
+									href='/courses'
 									className='button rounded-full  bg-blue-500 text-white hover:bg-green-500'
 									type='button'>
 									Learn, Trade, and Grow with Confidence
@@ -90,7 +90,8 @@ export default function Home() {
 								initial={{ opacity: 0, y: 50 }}
 								transition={{ duration: 0.6, delay: 0.6 }}>
 								<Link
-									href='/contact'
+									href='https://t.me/promakerinstitute'
+									target="_blank"
 									className=' button rounded-full bg-green-500 text-white hover:bg-blue-500 '
 									type='button'>
 									Join Our Community

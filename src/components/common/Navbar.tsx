@@ -61,13 +61,13 @@ const Navbar = () => {
 				className={`fixed top-0 right-0 h-screen w-64 bg-gray-900 p-6 flex flex-col md:hidden ${
 					isOpen ? "shadow-xl" : ""
 				}`}>
-				<ul className='space-y-6 text-lg font-medium'>
+				<ul className='space-y-6 text-lg font-medium h-full'>
 					{navLinks?.map((item) => (
-						<li key={item.title}>
+						<li key={item.title} className="hover:text-green-400 w-full">
 							<Link
 								href={item.link}
 								className={`${
-									pathname === item.link ? "text-green-400 font-bold" : ""
+									pathname === item.link ? "text-green-400 font-bold  w-full" : ""
 								}`}
 								onClick={() => setIsOpen(false)}>
 								{item.title}
