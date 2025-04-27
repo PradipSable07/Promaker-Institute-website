@@ -16,9 +16,7 @@ const FeedbackPage = () => {
                         src="https://docs.google.com/forms/d/e/1FAIpQLSfSRu3hO266FjR7Bz8V-JZmnLSN9MxEDYGp5QlXN00wIm8M9w/viewform?usp=sharing"  // Replace with your actual Google Form URL
                         width="100%"
                         height="800"  // Adjust the height as needed
-                        frameBorder="0"
-                        marginHeight="0"
-                        marginWidth="0"
+                       
                         title="Feedback Form"
                     >
                         Loading...
